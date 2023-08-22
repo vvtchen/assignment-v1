@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend/peopleList-backend
+    ports:
+      - "8000:8000"
+    restart: always
+    entrypoint: ./entrypoint.sh
+    volumes:
+      - staticfiles:/backend/staticfiles
+  nginx:
+    build:
+      context: .
+      dockerfile: ./webserver/Dockerfile
+    restart: always
+    volumes:
+      - staticfiles:/staticfiles
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+volumes:
+  staticfiles:
