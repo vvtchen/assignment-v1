@@ -138,6 +138,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-ALLOWED_HOSTS = ['0.0.0.0', 'weitingchen.com', 'www.weitingchen.com', "ec2-3-87-105-113.compute-1.amazonaws.com"]
+ALLOWED_HOSTS = ['0.0.0.0', 'weitingchen.com', 'www.weitingchen.com', "ec2-3-87-105-113.compute-1.amazonaws.com", "localhost"]
 
 
